@@ -1,0 +1,106 @@
+/* General Body and Font Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Banner Styles */
+header {
+    background-color: #0073e6;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Meal Blocks Styling */
+#meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#meals > div {
+    background-color: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    flex: 1 1 45%; /* Adjusts the size to fit two columns */
+    margin-right: 10px;
+}
+
+/* Last child margin-right fix for even spacing */
+#meals > div:nth-child(even) {
+    margin-right: 0;
+}
+
+/* Button Styling */
+button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+    header p {
+        font-size: 14px;
+    }
+    form {
+        width: 90%;
+    }
+    #meals > div {
+        flex: 1 1 100%; /* Stacks the divs in a single column on smaller screens */
+        margin-right: 0;
+    }
+}

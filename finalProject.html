@@ -5,14 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB-115 Final Project</title>
-    <link rel="stylesheet" href="styles.css"> <!-- CSS File -->
+    <link rel="stylesheet" href="styles.css">
     <script src="projectJS.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Build Your Meal Plan</h1>
-        <p>Michael Benavides - WEB-115 Section</p>
+        <p>Michael Benavides - WEB-115 </p>
     </header>
-    
+    <form id="mealPlannerForm">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="goal">Weekly Goal:</label>
+            <input type="text" id="goal" name="goal" requred>
+        </fieldset>
+        <fieldset>
+            <legend>Meal Plan</legend>
+            <div id="meals">
+                <!-- Inputs for each day and meal type will be generated here -->
+
+            </div>
+        </fieldset>
+        <button type="button" onclick="validateAndGeneratePlan()">Generate Meal Plan</button>
+    </form>
+    <div id="mealPlanOutput" style="display:none;">
+        <h2>Your Meal Plan</h2>
+    </div>
+    <script>
+        // Function to dynamically generate meal inputs
+        window.onload = function() {
+            generateMealInputs();
+        };
+    </script>
 </body>
 </html>
